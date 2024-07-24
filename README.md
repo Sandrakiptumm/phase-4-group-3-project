@@ -44,3 +44,28 @@ To address these challenges, we propose the following approach:
 
 We'll predict future real estate prices and look at how much money can be made and how risky each area is. This will help us recommend the 5 best zip codes to invest in. How well we do depends on how good our predictions are and how carefully we consider everything.
 
+## **Data Understanding**
+
+Our data is a csv file and it contains 14,723 rows and 272 columns.
+The dataset contains the following columns:
+
+- RegionID: Unique identifier for the region.
+- RegionName: Zip code of the region.
+- City: City name.
+- State: State abbreviation.
+- Metro: Metro area.
+- CountyName: County name.
+- SizeRank: Rank by size.
+- Date columns (from 1996-04 to 2018-04): Real estate prices for each month in this period.
+
+The data types are as follows:
+1. 49 columns are of type int64 (mostly identifiers).
+
+2. 219 columns are of type float64 (real estate prices).
+
+3. 4 columns are of type object (text data: City, State, Metro, CountyName).
+
+## **Data Preparation and Analysis**
+
+
+
