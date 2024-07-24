@@ -67,5 +67,40 @@ The data types are as follows:
 
 ## **Data Preparation and Analysis**
 
+ Before data cleaning,the plot indicates that there are significant outliers in the real estate prices for each month, suggesting the presence of extreme high values. The distribution of prices is relatively consistent over time, with a positive skewness indicating more high-value outliers.
+
+ After cleaning the data, the plot indicates that the data cleaning process has removed all outliers, resulting in an empty plot. This suggests that the z-score threshold might need to be adjusted to retain more data points while still removing extreme outliers.
+
+ In the process we check for missing values and find that the total missing values in the dataset is 157934.We then implement a method to fill missing values with the median of each column and the resulting total missing values in the dataset is 0
+
+ **Exploratory data analysis(EDA)**
+
+ Exploratory Data Analysis involves the following;
+
+1. Univariate Analysis: The analysis of individual variables to understand their distribution and summary statistics.
+
+2. Bivariate Analysis: The analysis between two variables.
+
+3. Multivariate Analysis: The analysis among three or more variables.
+
+So for our case we are going to use Univariate, Bivariate and multivariate analysis.
+
+**Univariate Analysis**
+
+![alt text](image.png)
+
+Overall, the plot shows the distribution of real estate prices in April 2018, with a large number of lower-priced properties and a small number of high-priced outliers.
+
+**Bivariate Analysis**
+
+![alt text](image-1.png)
+
+The scatter plot visualizes the relationship between real estate prices in April 2017 and April 2018.The plot shows that real estate prices in April 2017 are a good predictor of prices in April 2018, with a consistent upward trend and a few high-value outliers
+
+**Multivariate Analysis**
+
+![alt text](image-2.png)
+
+The pair plot visualizes the relationships between real estate prices in three selected months: April 2016, April 2017, and April 2018.the pair plot shows the strong positive correlations and linear relationships between real estate prices in April 2016, April 2017, and April 2018, along with the presence of high-value outliers and the right-skewed distribution of prices.
 
 
