@@ -1,6 +1,6 @@
 # **Predicting Future Housing Markets with Zillow's Data**
 
-![alt text](Major-Real-Estate-Market-Predictions-for-the-Next-Half-of-2020-thegem-blog-default-2.jpg)
+![alt text](Major-Real-Estate-Market-Predictions-for-the-Next-Half-of-2020-thegem-blog-default-1.jpg)
 
 ## **Business Understanding**
 
