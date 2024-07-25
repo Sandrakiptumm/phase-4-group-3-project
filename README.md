@@ -87,20 +87,29 @@ So for our case we are going to use Univariate, Bivariate and multivariate analy
 
 **Univariate Analysis**
 
-![alt text](image.png)
+![alt text](image-3.png)
 
-Overall, the plot shows the distribution of real estate prices in April 2018, with a large number of lower-priced properties and a small number of high-priced outliers.
+This means that we are focusing areas that are at the extreme end of the distribution as they have more than 10% ROI
 
 **Bivariate Analysis**
 
-![alt text](image-1.png)
+![alt text](image-4.png)
 
-The scatter plot visualizes the relationship between real estate prices in April 2017 and April 2018.The plot shows that real estate prices in April 2017 are a good predictor of prices in April 2018, with a consistent upward trend and a few high-value outliers
+The District of Columbia (DC) leads with the highest average of Annualized ROI. There is a noticeable variance in average ROI across states, with some states having ROIs above 5% and others below 3%.
 
 **Multivariate Analysis**
 
-![alt text](image-2.png)
+![alt text](image-5.png)
 
-The pair plot visualizes the relationships between real estate prices in three selected months: April 2016, April 2017, and April 2018.the pair plot shows the strong positive correlations and linear relationships between real estate prices in April 2016, April 2017, and April 2018, along with the presence of high-value outliers and the right-skewed distribution of prices.
+![alt text](image-6.png)
+
+The pair plot helps in understanding the distribution of individual variables and the relationships between them.In this case, it shows that there are no strong linear relationships between Annualized_ROI, SizeRank, and RegionID.
+
+The correlation matrix shows that there are no strong linear relationships between Annualized_ROI, SizeRank, and RegionID. 
+
+We then check if the zipcodes we are dealing with are unique.
+
+## **Modeling and evaluation**
+
 
 
