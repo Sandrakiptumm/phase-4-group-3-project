@@ -8,41 +8,7 @@
 
 A real estate company is on a mission to find the hottest zip codes to invest in. They've got historical housing data from Zillow, like a time capsule, and they'll use it to predict future price trends. 98
 
-**Problem Statement**
 
-Create a data-based recommendation for the top 5 zip codes the real estate investment firm should focus on, considering future price trends, risk factors, and the firm's investment timeframe.
-
-**Objectives**
-
-1. Build a model to predict future real estate prices for different zip codes.
-
-2. Review the predictions by looking at profit potential, risk, and how long to hold the investment.
-
-3. Suggest the top 5 zip codes for investment based on these factors.
-
-
-**Challenges**
-
-1. Determining the "optimal" investment requires balancing the potential for profit (expected price appreciation), risk tolerance (price instability), and investment duration (holding period).
-
-2. Real estate prices are influenced by factors beyond past data, including economic conditions, local development projects, and interest rates.
-
-3. Time series models have limitations; they cannot ensure accurate predictions, and future market behavior is inherently uncertain.
-
-
-**Proposed Solution: Metrics of Success**
-
-To address these challenges, we propose the following approach:
-
-1. Apply time series forecasting to the provided historical Zillow data to predict future real estate prices across different zip codes.
-
-2. Analyze the forecasts by evaluating the profit potential, which is the expected price increase in each zip code; the risk, which involves the historical price volatility in each zip code; and the investment horizon, which refers to the planned duration of holding the investment.
-
-3. Prioritizing investment opportunities involves analyzing forecasted prices, profit potential, and risk to identify the top 5 most promising zip codes for real estate investment.
-
-**Conclusion**
-
-We'll predict future real estate prices and look at how much money can be made and how risky each area is. This will help us recommend the 5 best zip codes to invest in. How well we do depends on how good our predictions are and how carefully we consider everything.
 
 ## **Data Understanding**
 
@@ -65,13 +31,21 @@ The data types are as follows:
 
 3. 4 columns are of type object (text data: City, State, Metro, CountyName).
 
+Statistical Summary:
+
+- There's a clear upward trend in real estate prices. The average price in 1996 was around 118,299 in dollars , and by 2018, it had risen to 288,039 in dollars.
+
+- Prices vary a lot between zip codes, showing the different types of real estate markets in each area.
+
+
 ## **Data Preparation and Analysis**
 
- Before data cleaning,the plot indicates that there are significant outliers in the real estate prices for each month, suggesting the presence of extreme high values. The distribution of prices is relatively consistent over time, with a positive skewness indicating more high-value outliers.
+ We're going to create a function that reads our data and gives us an overall view of it.
 
- After cleaning the data, the plot indicates that the data cleaning process has removed all outliers, resulting in an empty plot. This suggests that the z-score threshold might need to be adjusted to retain more data points while still removing extreme outliers.
+ From this we can see the various aggregate statistics and we can also see that our data has house prices for various regions from April 1996 to April 2018 we also note that the RegionName column represents the various zipcodes. So we'll appropriately rename the column.
 
- In the process we check for missing values and find that the total missing values in the dataset is 157934.We then implement a method to fill missing values with the median of each column and the resulting total missing values in the dataset is 0
+ We then look into Return on Investment for various cities, since we would like to recommend only the best options for our stakeholders and the outcome is that the best states to invest in is definitely New York. So we'll focus on this city for our project.
+
 
  **Exploratory data analysis(EDA)**
 
@@ -83,33 +57,30 @@ The data types are as follows:
 
 3. Multivariate Analysis: The analysis among three or more variables.
 
-So for our case we are going to use Univariate, Bivariate and multivariate analysis.
+So for our case we are going to use Univariate we only have 1 column of data against.
 
 **Univariate Analysis**
 
-![alt text](image-3.png)
+![alt text](image-7.png)
 
-This means that we are focusing areas that are at the extreme end of the distribution as they have more than 10% ROI
+From this plot we can see
+- Overall Trend:
+The ROI values show a clear upward trend over time. This indicates consistent growth in ROI from 1996 to 2018.
 
-**Bivariate Analysis**
+- Periods of Rapid Growth:
+There are several periods where the ROI increases sharply, such as around the years 2004 and in 2014. These periods of rapid growth could be attributed to various economic factors.
 
-![alt text](image-4.png)
+- Plateaus and Stabilization:
+Between approximately 2008 and 2013, the ROI appears to stabilize with minor fluctuations. This could suggest a period of market stabilization or maturity.
 
-The District of Columbia (DC) leads with the highest average of Annualized ROI. There is a noticeable variance in average ROI across states, with some states having ROIs above 5% and others below 3%.
+- Overall Volatility:
+The general trend appears smooth, with a few notable spikes or drops. This suggests that while there is growth, the ROI experiences periods of volatility which could be due to market conditions or specific events impacting the ROI.
 
-**Multivariate Analysis**
+- Seasonality or Cyclical Patterns:
+There doesn't seem to be a clear cyclical or seasonal pattern from the plot, but further analysis might be needed to confirm this.
 
-![alt text](image-5.png)
 
-![alt text](image-6.png)
 
-The pair plot helps in understanding the distribution of individual variables and the relationships between them.In this case, it shows that there are no strong linear relationships between Annualized_ROI, SizeRank, and RegionID.
-
-The correlation matrix shows that there are no strong linear relationships between Annualized_ROI, SizeRank, and RegionID. 
-
-We then check if the zipcodes we are dealing with are unique.
-
-## **Modeling and evaluation**
 
 
 
