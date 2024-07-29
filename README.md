@@ -80,7 +80,25 @@ The general trend appears smooth, with a few notable spikes or drops. This sugge
 There doesn't seem to be a clear cyclical or seasonal pattern from the plot, but further analysis might be needed to confirm this.
 
 
+## **Modelling**
 
+We build a model that helps our investors in determining future prices of houses in New York. NY has the best returns and that is why we want to help investors get the best return for their investments and value for money.
+
+The Model we are going to build is ARIMA and try and tune it to get the best predictions for future prices.
+From the auto correlation function and partial auto correlation functions determined above, the best p, d, q arrangement is (12, 1, and 12).
+
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
+
+This is how our model is fitting into the data, the red is the prediction from the model while the light blue one is the actual values.
+
+These plots typically compare the residuals of a fitted model to those of the original time series.
+
+Residuals at higher lags appear randomly distributed and small, resembling white noise.
+
+Both models seem to handle higher lags well, with residuals appearing random and small, suggesting they are well-fitted for those lags.
 
 
 
