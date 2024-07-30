@@ -105,6 +105,12 @@ Both models seem to handle higher lags well, with residuals appearing random and
 
 For the base model the ARIMA captured the upward trend in predicting the values but for better performance we recommend to use a grid search or auto ARIMA to get better performance by selecting the best parameters.
 
+**FURTHER STEPS**
+
+1.	.Implement grid search or auto ARIMA: Using grid search or auto ARIMA to find optimal parameters (p,d,q) could improve model performance. This would help fine-tune the model beyond the initial (10, 0, 10) configuration.
+2.	Validate model assumptions: Check if the residuals of the ARIMA model meet key assumptions like normality and no autocorrelation. This can be done using diagnostic plots and statistical tests.
+3.	Perform out-of-sample forecasting: Split the data into training and test sets to evaluate how well the model performs on unseen data. This will give a better indication of its predictive power.
+
 
 **CONCLUSION**
 
