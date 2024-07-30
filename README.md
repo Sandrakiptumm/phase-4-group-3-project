@@ -101,4 +101,8 @@ Residuals at higher lags appear randomly distributed and small, resembling white
 Both models seem to handle higher lags well, with residuals appearing random and small, suggesting they are well-fitted for those lags.
 
 
+**RECOMMENDATIONS**
+
+For the base model the ARIMA captured the upward trend in predicting the values but for better performance we recommend to use a grid search or auto ARIMA to get better performance by selecting the best parameters.
+
 
